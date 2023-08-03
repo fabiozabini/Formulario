@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500&family=Nunito:ital,wght@1,300&display=swap');
+
+* {
+    background-color: #676f77;
+    padding: 4px;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    font-family: 'Nunito', sans-serif;
+}
+
+form {
+    display: grid;
+    margin-left: 0;
+}
+
+.container {
+    height: 0px;
+    padding: 0px;
+    justify-content: center;
+    display: flex;
+}
+
+
+.container label{
+    padding: 5px;
+    font-family: 'Nunito', sans-serif bolder;
+   
+}
+
+.container input{
+    background-color: #f5f7f7;
+    border-radius: 8px;
+    font-family: 'Dosis', sans-serif;
+    width: 19rem;
+}
+
+#button {
+    width: 9rem;
+    border-radius: 8px;
+    margin-top: 16px;
+    cursor: pointer;
+    height: 32px;
+    margin-left: 5rem;
+}
+ 
+    
