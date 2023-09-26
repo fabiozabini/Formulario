@@ -4,41 +4,47 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    
+
     <title>Formulário</title>
   </head>
   <body>
     <h1>Formulário de Cadastro</h1>
     <div class="container">
-      <form>
-        <label for="name">Nome:</label>
-        <input type="text" placeholder="Nome completo" />
+      <form id="meuForm">
+        <label for="name">Nome:</label> 
+        <input autocomplete="none" type="text" id="campo" placeholder="Nome completo" required />
 
         <label for="e-mail">E-mail:</label>
-        <input type="email" placeholder="Seu melhor e-mail" />
+        <input id="email" autocomplete="none" type="email" placeholder="Seu melhor e-mail" required />
+        <span id="errormensage"></span>
 
-        <label for="phone">Telefone:</label>
-        <input type="number" placeholder="DDD + números" />
+        <label for="telefone">Telefone:</label>
+        <input id="telefone" autocomplete="none" type="tel" placeholder="(XX) XXXXX-XXXX" required />
+        <span id="error"></span>
 
         <label for="adress">Rua:</label>
-        <input type="text" placeholder="Digite seu endereço" />
+        <input autocomplete="none" type="text" placeholder="Digite seu endereço" required />
 
         <label for="adress">Número:</label>
-        <input type="number" placeholder="Digite o número da residência" />
+        <input autocomplete="none" type="number" placeholder="Digite o número da residência" required />
 
         <label for="adress">Complemento:</label>
-        <input type="text" placeholder="Ex: Apto 1 Bloco 2" />
+        <input autocomplete="none" type="text" placeholder="Ex: Apto 1 Bloco 2" required />
 
         <label for="adress">Cidade:</label>
-        <input type="text" placeholder="Digite sua cidade" />
+        <input autocomplete="none" type="text" placeholder="Digite sua cidade" required />
 
         <label for="adress">Estado:</label>
-        <input type="text" placeholder="Digite seu estado" />
+        <input autocomplete="none" type="text" placeholder="Digite seu estado" required />
 
         <label for="adress">CEP:</label>
-        <input type="number" placeholder="Digite seu CEP" />
-
-        <input id="button" type="submit" value="Enviar" />
+        <input id="cep" autocomplete="none" type="number"  placeholder="Digite seu CEP" required />
+        <span id="errormsg"></span>
+        
+        <button type="submit" id="button" disabled>Enviar</button>
       </form>
     </div>
+    <script src="main.js"/></script>
   </body>
 </html>
