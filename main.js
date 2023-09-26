@@ -46,22 +46,12 @@ telefoneInput.addEventListener("input", function () {
     value = value.substr(0, 10) + '-' + value.substr(10);
   }
 
-  //  Fabio se nao der certo o problema de apagar tenta esse codigo de baixo...
-
   
-  // if (value.length <= 2) {
-  //   value = '(' + value;
-  // } else if (value.length > 2 && value.length <= 9) {
-  //   value = '(' + value.substring(0, 2) + ') ' + value.substring(2);
-  // } else if (value.length > 9) {
-  //   value = '(' + value.substring(0, 2) + ') ' + value.substring(2, 9) + '-' + value.substring(9);
-  // }
 
   telefoneInput.value = value;
   console.log(telefoneInput.value);
   const resultado = isValidTelefone(value);
-  
-  if (!resultado) {
+    if (!resultado) {
     error.textContent = "Campo inválido";
     error.style.color = "red";
     error.style.fontWeight = "bold";
@@ -69,11 +59,11 @@ telefoneInput.addEventListener("input", function () {
     error.textContent = "";
   }
 });
-
 function isValidTelefone(telefone) {
   const telefoneRegex = /^\(\d{2}\) \d{4,5}-\d{4}$/;
   return telefoneRegex.test(telefone);
 }
+
 
 const cepInput = document.getElementById("cep");
 const errormsg = document.getElementById("errormsg");
@@ -96,9 +86,5 @@ function isValidCep(cep) {
 }
 
 
-// function isValidTelefone(telefone) {
-//   const telefoneRegex = /^\(\d{2}\) \d{4,5}-\d{4}$/;
-//   return telefoneRegex.test(telefone);
-// }
 
 
