@@ -69,9 +69,9 @@ const cepInput = document.getElementById("cep");
 const errormsg = document.getElementById("errormsg");
 cepInput.addEventListener("input", function () {
   const value = cepInput.value;
-  const result = isValidCep(value);
-  console.log(result);
-  if (!result) {
+  const resul = isValidCep(value);
+  console.log(resul);
+  if (!resul) {
     errormsg.textContent = "Campo inválido";
     errormsg.style.color = "red";
     errormsg.style.fontWeight = "bold";
@@ -84,6 +84,8 @@ function isValidCep(cep) {
   const cepRegex = /^\d{5}-\d{3}$/;
   return cepRegex.test(cep);
 }
+
+
 
 
 
